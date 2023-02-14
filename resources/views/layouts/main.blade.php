@@ -18,7 +18,8 @@
 <div class="wrapper">
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <p class="animation__shake">Waiting</p>
+        <p class="animation__shake">Nico <i class="fas fa-dragon"></i>hop
+        </p>
     </div>
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -123,7 +124,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <span class="brand-text font-weight-light">NicoShop</span>
+            <span class="brand-text font-weight-light">Nico <i class="fas fa-dragon"></i>hop</span>
         </a>
         <!-- Sidebar -->
         <div class="sidebar">

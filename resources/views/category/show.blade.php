@@ -25,8 +25,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <a href="{{ route('category.edit', $category->id) }}" class="btn btn-primary">Edit category</a>
+                        <div class="card-header d-flex p-3">
+                            <div class="mr-3">
+                                <a href="{{ route('category.edit', $category->id) }}" class="btn btn-primary">Edit category</a>
+                            </div>
+                            <form action="{{ route('category.delete', $category->id) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" class="btn btn-danger" value="Delete">
+                            </form>
                         </div>
 
                         <div class="card-body table-responsive p-0">
