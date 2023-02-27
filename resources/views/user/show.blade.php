@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Color</h1>
+                    <h1 class="m-0">User</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -27,9 +27,9 @@
                     <div class="card">
                         <div class="card-header d-flex p-3">
                             <div class="mr-3">
-                                <a href="{{ route('color.edit', $color->id) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary">Edit</a>
                             </div>
-                            <form action="{{ route('color.delete', $color->id) }}" method="post">
+                            <form action="{{ route('user.delete', $user->id) }}" method="post">
                                 @csrf
                                 @method('delete')
                                 <input type="submit" class="btn btn-danger" value="Delete">
@@ -41,11 +41,35 @@
                                 <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{ $color->id }}</td>
+                                        <td>{{ $user->id }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Color name</td>
-                                        <td>{{ $color->title }}</td>
+                                        <td>Name</td>
+                                        <td>{{ $user->name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Surname</td>
+                                        <td>{{ $user->surname }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Patronymic</td>
+                                        <td>{{ $user->patronymic }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td>{{ $user->email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Age</td>
+                                        <td>{{ $user->age }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gender</td>
+                                        <td>{{ $user->GenderTitle }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address</td>
+                                        <td>{{ $user->address }}</td>
                                     </tr>
                                 </tbody>
                             </table>

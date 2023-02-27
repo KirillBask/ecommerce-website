@@ -27,7 +27,7 @@
                     @csrf
 
                     <div class="form-group">
-                        <input type="text" name="title" class="form-control" placeholder="Category name">
+                        <input type="text" name="title" class="form-control" placeholder="Tag name">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Add">

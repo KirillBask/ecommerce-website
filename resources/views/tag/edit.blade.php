@@ -30,7 +30,7 @@
                         <input type="text" name="title" value="{{ $tag->title }}" class="form-control" placeholder="Category name">
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Edit category">
+                        <input type="submit" class="btn btn-primary" value="Save">
                     </div>
                 </form>
             </div>

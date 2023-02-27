@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $color = Color::all();
-        return view('color.index', compact('color'));
+        $colors = Color::all();
+        return view('color.index', compact('colors'));
     }
 }

@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Add category</h1>
+                    <h1 class="m-0">Add color</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -23,11 +23,11 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <form action="{{route('category.store')}}" method="post">
+                <form action="{{route('color.store')}}" method="post">
                     @csrf
 
                     <div class="form-group">
-                        <input type="text" name="title" class="form-control" placeholder="Category name">
+                        <input type="text" name="title" class="form-control" placeholder="Color name">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Add">

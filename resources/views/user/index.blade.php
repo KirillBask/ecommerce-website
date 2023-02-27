@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Colors</h1>
+                    <h1 class="m-0">Users</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="{{ route('color.create') }}" class="btn btn-primary">Add color</a>
+                            <a href="{{ route('user.create') }}" class="btn btn-primary">Add user</a>
                         </div>
 
                         <div class="card-body table-responsive p-0">
@@ -34,24 +34,32 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Color name</th>
-                                    <th>Color</th>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th>Patronymic</th>
+                                    <th>Email</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Address</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($colors as $color)
+                                @foreach($users as $user)
                                     <tr>
-                                        <td>{{ $color->id }}</td>
-                                        <td><a href="{{route('color.show', $color->id)}}"> {{ $color->title }}</a></td>
-                                        <td> <div style="width:16px; height:16px; background:{{ $color->title }}"></div></td>
+                                        <td>{{ $user->id }}</td>
+                                        <td><a href="{{route('user.show', $user->id)}}">{{ $user->name }}</a></td>
+                                        <td>{{ $user->surname }}</td>
+                                        <td>{{ $user->patronymic }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->age }}</td>
+                                        <td>{{ $user->GenderTitle }}</td>
+                                        <td>{{ $user->address }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
-
                 </div>
             </div>
             <!-- /.row -->
