@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -12,6 +11,24 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const GENDER_MALE = 1;
+    const GENDER_FEMALE = 2;
+
+    static function getGender()
+    {
+      return [
+          self::GENDER_MALE => 'Male',
+          self::GENDER_FEMALE => 'Female',
+      ];
+    }
+
+    public function getGenderTitleAttribute()
+    {
+        return self::getGender()[$this->gender];
+    }
+
+    protected $table = 'users';
+    protected $guarded = false;
     /**
      * The attributes that are mass assignable.
      *
@@ -20,7 +37,11 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'surname',
+        'patronymic',
+        'age',
+        'address',
+        'gender'
     ];
 
     /**
